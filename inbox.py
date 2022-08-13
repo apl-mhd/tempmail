@@ -1,6 +1,6 @@
 import imaplib
 import email
-imap_server = imaplib.IMAP4(host='mail.mykitchengossip.com')
+imap_server = imaplib.IMAP4_SSL(host='mail.mykitchengossip.com')
 imap_server.login('test@mykitchengossip.com', 'NS18n-VNkvv.')
 imap_server.select()  # Default is `INBOX`
 
