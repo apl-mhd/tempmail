@@ -25,6 +25,7 @@ for num in search_data[0].split():
         print("{}: {} ". format(header, email_message[header]))
     
     for part in email_message.walk():
+        #if part.get_content_type() == "text/plain" or part.get_content_type() == "text/html":
         if part.get_content_type() == "text/html":
             body = part.get_payload(decode=True).decode()
             final_content = body.replace('dir="ltr"', "")
